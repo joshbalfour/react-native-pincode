@@ -115,9 +115,9 @@ class PinCode extends React.PureComponent {
                     } }, ({ opacity, x, height, width, color, borderRadius, marginRight, marginTop, marginLeft, marginBottom }) => (React.createElement(react_native_1.View, { style: {
                         left: x,
                         opacity: opacity,
-                        height: height,
-                        width: width,
-                        borderRadius: borderRadius,
+                        height: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : height,
+                        width: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : width,
+                        borderRadius: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize / 2 : 4,
                         marginLeft: marginLeft,
                         marginRight: marginRight,
                         marginBottom: marginBottom,
