@@ -46,6 +46,7 @@ export declare type IProps = {
     styleColorSubtitleError?: string;
     styleColorButtonTitle?: string;
     styleColorButtonTitleSelected?: string;
+    hiddenPasswordSize?: number;
 };
 export declare type IState = {
     password: string;

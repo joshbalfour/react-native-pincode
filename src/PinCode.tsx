@@ -65,6 +65,7 @@ export type IProps = {
   styleColorSubtitleError?: string
   styleColorButtonTitle?: string
   styleColorButtonTitleSelected?: string
+  hiddenPasswordSize?: number
 }
 
 export type IState = {
@@ -270,8 +271,8 @@ class PinCode extends React.PureComponent<IProps, IState> {
                 <View style={{
                   left: x,
                   opacity: opacity,
-                  height: height,
-                  width: width,
+                  height: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : height,
+                  width: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : width,
                   borderRadius: borderRadius,
                   marginLeft: marginLeft,
                   marginRight: marginRight,

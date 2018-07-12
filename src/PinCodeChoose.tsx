@@ -34,6 +34,7 @@ export type IProps = {
   styleButtonCircle?: StyleProp<ViewStyle>
   styleTextButton?: StyleProp<TextStyle>
   styleCircleHiddenPassword?: StyleProp<ViewStyle>
+  hiddenPasswordSize?: number
   styleRowButtons?: StyleProp<ViewStyle>
   styleColumnButtons?: StyleProp<ViewStyle>
   styleEmptyColumn?: StyleProp<ViewStyle>
@@ -109,6 +110,7 @@ class PinCodeChoose extends React.PureComponent<IProps, IState> {
           styleButtonCircle={this.props.styleButtonCircle}
           styleTextButton={this.props.styleTextButton}
           styleCircleHiddenPassword={this.props.styleCircleHiddenPassword}
+          hiddenPasswordSize={this.props.hiddenPasswordSize}
           styleRowButtons={this.props.styleRowButtons}
           styleColumnButtons={this.props.styleColumnButtons}
           styleEmptyColumn={this.props.styleEmptyColumn}
@@ -150,6 +152,7 @@ class PinCodeChoose extends React.PureComponent<IProps, IState> {
           styleButtonCircle={this.props.styleButtonCircle}
           styleTextButton={this.props.styleTextButton}
           styleCircleHiddenPassword={this.props.styleCircleHiddenPassword}
+          hiddenPasswordSize={this.props.hiddenPasswordSize}
           styleRowButtons={this.props.styleRowButtons}
           styleColumnButtons={this.props.styleColumnButtons}
           styleEmptyColumn={this.props.styleEmptyColumn}

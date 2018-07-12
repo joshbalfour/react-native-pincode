@@ -10,6 +10,7 @@ import {PinResultStatus} from '../index'
  */
 
 export type IProps = {
+  
   storedPin: string | null
   touchIDSentence: string
   handleResult: any

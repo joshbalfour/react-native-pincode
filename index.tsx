@@ -85,6 +85,7 @@ export type IProps = {
   titleEnter?: string
   touchIDDisabled?: boolean
   touchIDSentence?: string
+  hiddenPasswordSize?: number
 }
 
 export type IState = {
@@ -180,6 +181,7 @@ class PINCode extends React.PureComponent<IProps, IState> {
           titleComponent={this.props.titleComponent}
           subtitleComponent={this.props.subtitleComponent}
           pinCodeKeychainName={this.props.pinCodeKeychainName || 'reactNativePinCode'}
+          hiddenPasswordSize={this.props.hiddenPasswordSize}
           styleContainer={this.props.stylePinCodeChooseContainer}
           styleButtonCircle={this.props.stylePinCodeButtonCircle}
           styleTextButton={this.props.stylePinCodeTextButtonCircle}

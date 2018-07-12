@@ -89,9 +89,9 @@ class PinCode extends React.PureComponent {
                 const marginSup = ((password.length > 0 && !changeScreen) || showError) && !attemptFailed;
                 return (React.createElement(Animate_1.default, { key: val, show: true, start: {
                         opacity: 0.5,
-                        height: 4,
-                        width: 4,
-                        borderRadius: 2,
+                        height: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : 4,
+                        width: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : 4,
+                        borderRadius: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize / 2 : 2,
                         color: (this.props.colorPassword ? this.props.colorPassword : colors_1.colors.turquoise),
                         marginRight: 10,
                         marginLeft: 10,

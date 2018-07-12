@@ -140,6 +140,7 @@ import PINCode from '@haskkor/react-native-pincode'
 |**`stylePinCodeTextSubtitle`**|Title of the PinCode file|`fontSize: 20, fontWeight: '200', lineHeight: grid.unit * 2.5`|`StyleProp<TextStyle>`|
 |**`stylePinCodeTextTitle`**|Subtitle of the PinCode file|`fontSize: grid.unit, fontWeight: '200', textAlign: 'center'`|`StyleProp<TextStyle>`|
 |**`stylePinCodeViewTitle`**|View of the title of the PinCode file|`flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: grid.unit * 4`|`StyleProp<TextStyle>`|
+|**`hiddenPasswordSize`**|Size of the circles representing the hidden password|`4`|`number`|
 
 ## [Changelog](https://github.com/Haskkor/react-native-pincode/blob/master/CHANGELOG.md)
 
