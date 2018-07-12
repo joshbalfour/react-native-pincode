@@ -70,7 +70,7 @@ class PinCode extends React.PureComponent {
                 React.createElement(react_native_1.Text, { style: [this.props.styleTextButton ? this.props.styleTextButton : styles.text, {
                             opacity: opacity,
                             color: this.state.textButtonSelected === text ? (this.props.styleColorButtonTitleSelected ?
-                                this.props.styleColorButtonTitleSelected : colors_1.colors.white) : (this.props.styleColorButtonTitle ?
+                                this.props.styleColorButtonTitleSelected : colors_1.colors.black) : (this.props.styleColorButtonTitle ?
                                 this.props.styleColorButtonTitle : colors_1.colors.grey)
                         }] }, text)))));
         };
@@ -102,10 +102,10 @@ class PinCode extends React.PureComponent {
                     }, update: {
                         x: [moveData.x],
                         opacity: [lengthSup ? 1 : 0.5],
-                        height: [lengthSup ? 8 : 4],
-                        width: [lengthSup ? 8 : 4],
+                        height: [lengthSup ? (this.props.hiddenPasswordSize? this.props.hiddenPasswordSize * 1.5 : 8) : (this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : 4)],
+                        width: [lengthSup ? (this.props.hiddenPasswordSize? this.props.hiddenPasswordSize * 1.5 : 8) : (this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : 4)],
                         color: [showError ? (this.props.colorPasswordError ? this.props.colorPasswordError : colors_1.colors.alert) : (this.props.colorPassword ? this.props.colorPassword : colors_1.colors.turquoise)],
-                        borderRadius: [lengthSup ? 4 : 2],
+                        borderRadius: [lengthSup ? (this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : 8) : (this.props.hiddenPasswordSize? this.props.hiddenPasswordSize / 1.5 : 2)],
                         marginRight: [lengthSup ? 8 : 10],
                         marginLeft: [lengthSup ? 8 : 10],
                         marginBottom: [marginSup ? 30 : grid_1.grid.unit * 2],
@@ -115,9 +115,9 @@ class PinCode extends React.PureComponent {
                     } }, ({ opacity, x, height, width, color, borderRadius, marginRight, marginTop, marginLeft, marginBottom }) => (React.createElement(react_native_1.View, { style: {
                         left: x,
                         opacity: opacity,
-                        height: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : height,
-                        width: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize : width,
-                        borderRadius: this.props.hiddenPasswordSize? this.props.hiddenPasswordSize / 2 : 4,
+                        height: height,
+                        width: width,
+                        borderRadius: borderRadius,
                         marginLeft: marginLeft,
                         marginRight: marginRight,
                         marginBottom: marginBottom,
@@ -225,7 +225,7 @@ class PinCode extends React.PureComponent {
                     colorSubtitle: [showError || attemptFailed ?
                             (this.props.styleColorSubtitleError ? this.props.styleColorSubtitleError : colors_1.colors.alert) :
                             (this.props.styleColorSubtitle ? this.props.styleColorSubtitle : colors_1.colors.grey)],
-                    opacityTitle: [showError || attemptFailed ? grid_1.grid.highOpacity : 1],
+                    opacityTitle: 1,
                     timing: { duration: 200, ease: d3_ease_1.easeLinear }
                 } }, ({ opacity, colorTitle, colorSubtitle, opacityTitle }) => (React.createElement(react_native_1.View, { style: [this.props.styleViewTitle ? this.props.styleViewTitle : styles.viewTitle, { opacity: opacity }] },
                 this.props.titleComponent ? this.props.titleComponent() :
